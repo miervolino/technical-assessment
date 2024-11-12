@@ -1,8 +1,8 @@
 // src/App.js
 import React, { useState } from 'react';
 import './App.css';
-import ContactTable from './ContactTable';
-import AddContactForm from './AddContactForm';
+import ContactTable from './react_components/ContactTable';
+import AddContactForm from './react_components/AddContactForm';
 
 function App() {
   // Get the default token from environment variables
