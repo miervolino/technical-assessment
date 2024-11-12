@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# HubSpot Contact Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple Contact Manager application for managing contacts in your HubSpot CRM account. It provides a form to add new contacts and displays existing contacts in a table with options to refresh and search.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add New Contacts**: Fill out a form to add a new contact to HubSpot.
+- **View Contacts**: Display a table of contacts retrieved from HubSpot.
+- **Search and Refresh**: Refresh the list and filter by email.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to set up and run the project locally.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- **Node.js**: Make sure you have [Node.js](https://nodejs.org/) installed on your machine (version 14 or higher).
+- **Git**: You’ll need [Git](https://git-scm.com/) to clone the repository.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps
 
-### `npm run build`
+1. **Clone the Repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Open your terminal and run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the Project Directory**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd your-repository-name
 
-### `npm run eject`
+3. **Install Dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Run the following command to install all necessary dependencies:
+   ```bash
+   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Set Up Environment Variables**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   For security purposes, the API bearer token should be added through an input field in the app. However, you may provide a default bearer token in a .env file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   To securely store your API token, you'll need to set up environment variables.
 
-## Learn More
+   - Create a file named `.env` in the root directory of your project (the same directory as `package.json`).
+   - Add the following content to the `.env` file:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     ```
+     REACT_APP_HUBSPOT_API_TOKEN=your_hubspot_api_token_here
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Replace `your_hubspot_api_token_here` with your actual HubSpot API bearer token.
 
-### Code Splitting
+   This way, the bearer token will be securely stored in your environment, and it can be accessed by your React app during runtime.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Note: Do not include sensitive information (like bearer tokens) directly in the code or commit it to the repository.
 
-### Analyzing the Bundle Size
+5. **Start the Application**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Start the development server by running:
+   ```bash
+   npm start
 
-### Making a Progressive Web App
+   This will launch the application in your default web browser at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. **Using the Application**:
 
-### Advanced Configuration
+   - **Enter Bearer Token**: Before using the app, enter your HubSpot API bearer token in the input field labeled "Enter Bearer Token." If no token is entered, a default token from the `.env` file will be used.
+   - **Add New Contacts**: Use the "Create New Contact" form to add contacts to your HubSpot account.
+   - **Refresh Contacts**: Click the "Refresh Contacts" button to retrieve the latest list of contacts.
+   - **View Contacts**: The contact table will display the contacts fetched from your HubSpot account, showing essential information like `First Name`, `Last Name`, `Email`, `Creation Date`, and `Last Modified Date`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   **Note**: Ensure that your HubSpot portal has been set up with the necessary permissions to allow API access and that your bearer token is correct.
