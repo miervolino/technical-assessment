@@ -23,12 +23,12 @@ Follow these steps to set up and run the project locally.
 
    Open your terminal and run the following command to clone the repository:
    ```bash
-   git clone https://github.com/miervolino/technical-assessment.git
+   git clone https://github.com/miervolino/technical-assessment-option1
 
 2. **Navigate to the Project Directory**:
 
    ```bash
-   cd technical-assessment
+   cd technical-assessment-option1
 
 3. **Install Dependencies**:
 
