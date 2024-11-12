@@ -11,7 +11,7 @@ function App() {
   // Hardcoding the API configuration for the HubSpot API endpoint, with bearer token fallback
   const [apiConfig, setApiConfig] = useState({
     apiUrl: '/crm/v3/objects/contacts', // HubSpot API endpoint
-    bearerToken: DEFAULT_BEARER_TOKEN // Initially empty, will use the default if no input provided
+    bearerToken: DEFAULT_BEARER_TOKEN // Uses the default bearer token if no input provided
   });
 
   // Function to handle updating the bearer token
